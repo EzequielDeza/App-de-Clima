@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './FormularioBusqueda.css'
+import { climaService } from '../services/clima.service';
 
 function FormularioBusqueda() {
     const {
@@ -9,9 +10,14 @@ function FormularioBusqueda() {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Ciudad buscada:", data.ciudad);
-        // Acá podés llamar a la API del clima
+    const onSubmit = async (data) => {
+        try {
+            const resultado = await climaService.getClimaPorCiudad(data.ciudad);
+            console.log("Resultado de la búsqueda:", resultado);
+        } catch (error) {
+            console.error("Error al buscar el clima:", error);
+            alert("No se pudo encontrar la ciudad. Por favor, verifica el nombre e intenta nuevamente.");
+        }
     };
 
     return (
