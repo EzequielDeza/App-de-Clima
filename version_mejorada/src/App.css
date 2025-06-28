@@ -1,4 +1,3 @@
-/*
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,39 +5,52 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* ESTILOS PROPIOS */
+
+/* FORMULARIO DE BUSQUEDA */
+.city_name_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  margin: 0 auto;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.city_name_form Label {
+  border-bottom: 1px solid #7e7878;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.city_name_form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7e7878;
 }
 
-.card {
-  padding: 2em;
+button:hover {
+  border-color: #2a2c91;
+  background-color: #1e2066;
 }
 
-.read-the-docs {
-  color: #888;
+/* LISTA DE CIUDADES */
+ul li {
+  list-style: none;
+  border: 1px solid #7e7878;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 300px;
 }
-*/
+
+ul li:hover {
+  background-color: #1a1a1a;
+}
+
+.city_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
