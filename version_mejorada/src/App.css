@@ -34,12 +34,17 @@ button:hover {
 }
 
 /* LISTA DE CIUDADES */
-ul li {
+.city_card {
+  padding: 10px;
+}
+
+.city_card li {
   list-style: none;
   border: 1px solid #7e7878;
   border-radius: 5px;
   margin-bottom: 10px;
   max-width: 300px;
+  padding: 10px;
 }
 
 ul li:hover {
@@ -51,6 +56,29 @@ ul li:hover {
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+}
+
+/* DETALLE DEL CLIMA */
+.city_detail {
+  border: 1px solid #7e7878;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #1a1a1a;
+  width: 400px;
+}
+
+.city_detail button {
+  background-color: #242424;;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.city_detail button:hover {
+  background-color: #1e2066;
+  border: 1px solid #2a2c91;
 }
 
 
